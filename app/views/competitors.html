@@ -1,1 +1,26 @@
 <p>This is the competitors view.</p>
+
+
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Grade</th>
+            <th>Age</th>
+            <th>Occupation</th>
+            <th>Prefecture</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="entry in entries">
+            <td>{{entry.competitor_number}}</td>
+            <td>{{entry.name}}</td>
+            <td>{{entry.grade}}</td>
+            <td>{{entry.age}}</td>
+            <td>{{entry.occupation}}</td>
+            <td>{{entry.prefecture}}</td>
+        </tr>
+    </tbody>
+
+</table>
