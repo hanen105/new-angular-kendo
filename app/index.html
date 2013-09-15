@@ -27,6 +27,17 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
+    <div class="navbar navbar-inverse">
+        <div class="navbar-inner">
+            <a class="brand" href="#/">AngularKendo</a>
+            <ul class="nav">
+                <li><a href="#/competitors">Competitors</a></li>
+                <li><a href="#/events">Events</a></li>
+                <li><a href="#/prefectures">Prefectures</a></li>
+            </ul>
+        </div>
+    </div>
+
     <div class="container" ng-view=""></div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -68,6 +79,9 @@
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/competitors.js"></script>
+        <script src="scripts/controllers/events.js"></script>
+        <script src="scripts/controllers/prefectures.js"></script>
         <!-- endbuild -->
 </body>
 </html>
