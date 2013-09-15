@@ -3,4 +3,4 @@ of angular and other dependencies.
 
 This app is to experiment with Angular and related ecosystem.
 
-
+This app uses Angular.js, Twitter Bootstrap with Glyphicons, and yeoman.
