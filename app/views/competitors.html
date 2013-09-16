@@ -16,12 +16,22 @@
     </thead>
     <tbody>
         <tr ng-repeat="entry in entries">
-            <td>{{entry.competitor_number}}</td>
-            <td>{{entry.name}}</td>
-            <td>{{entry.grade}}</td>
-            <td>{{entry.age}}</td>
-            <td>{{entry.occupation}}</td>
-            <td>{{entry.prefecture}}</td>
+            <td ng-show="!entry.selected">{{entry.competitor_number}}</td>
+            <td ng-show="!entry.selected">{{entry.name}}</td>
+            <td ng-show="!entry.selected">{{entry.grade}}</td>
+            <td ng-show="!entry.selected">{{entry.age}}</td>
+            <td ng-show="!entry.selected">{{entry.occupation}}</td>
+            <td ng-show="!entry.selected">{{entry.prefecture}}</td>
+            <td colspan=6 ng-show="entry.selected">
+                <form ng-submit="toggleSelected($index,false)">
+                    <input type="text" style="width:10em" ng-model="entry.name">
+                    <input type="text" style="width:6em" ng-model="entry.grade">
+                    <input type="text" style="width:2em" ng-model="entry.age">
+                    <input type="text" style="width:10em" ng-model="entry.occupation">
+                    <input type="text" style="width:8em" ng-model="entry.prefecture">
+                    <input class="btn" type="submit" value="close">
+                </form>
+            </td>
             <td>
                 <div ng-switch="entry.selected">
                     <div ng-switch-when="true">
